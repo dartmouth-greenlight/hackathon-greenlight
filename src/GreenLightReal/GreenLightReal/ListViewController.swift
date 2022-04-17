@@ -7,11 +7,11 @@
 
 import Foundation
 import UIKit
-var socialList = Set<String>()
+var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley"]
 class ListViewController: UIViewController{
     @IBOutlet var listLabel: UILabel!
     @IBAction func socialListButton(_ sender: Any) {
-        listLabel.text = 
+        listLabel.text = "Social List";
     }
     
     override func viewDidLoad() {
