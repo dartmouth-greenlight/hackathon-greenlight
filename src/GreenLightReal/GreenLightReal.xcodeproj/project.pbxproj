@@ -17,6 +17,10 @@
 		0C4E64B0280BF2AC0061A668 /* GreenLightRealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64AF280BF2AC0061A668 /* GreenLightRealUITests.swift */; };
 		0C4E64B2280BF2AC0061A668 /* GreenLightRealUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64B1280BF2AC0061A668 /* GreenLightRealUITestsLaunchTests.swift */; };
 		0C4E64C1280C008A0061A668 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64C0280C008A0061A668 /* List.swift */; };
+		7B1F715C280C017700B859A1 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715B280C017700B859A1 /* VisionViewController.swift */; };
+		7B1F715E280C01FF00B859A1 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715D280C01FF00B859A1 /* StringUtils.swift */; };
+		7B1F7160280C024900B859A1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715F280C024900B859A1 /* CameraViewController.swift */; };
+		7B1F7162280C03B800B859A1 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F7161280C03B800B859A1 /* PreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +54,10 @@
 		0C4E64AB280BF2AC0061A668 /* GreenLightRealUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenLightRealUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4E64AF280BF2AC0061A668 /* GreenLightRealUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenLightRealUITests.swift; sourceTree = "<group>"; };
 		0C4E64B1280BF2AC0061A668 /* GreenLightRealUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenLightRealUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0C4E64C0280C008A0061A668 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		7B1F715B280C017700B859A1 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		7B1F715D280C01FF00B859A1 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		7B1F715F280C024900B859A1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		7B1F7161280C03B800B859A1 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +111,14 @@
 				0C4E648E280BF2AB0061A668 /* AppDelegate.swift */,
 				0C4E6490280BF2AB0061A668 /* SceneDelegate.swift */,
 				0C4E6492280BF2AB0061A668 /* ViewController.swift */,
-				0C4E64C0280C008A0061A668 /* List.swift */,
+				7B1F715D280C01FF00B859A1 /* StringUtils.swift */,
+				7B1F715F280C024900B859A1 /* CameraViewController.swift */,
+				7B1F7161280C03B800B859A1 /* PreviewView.swift */,
 				0C4E6494280BF2AB0061A668 /* Main.storyboard */,
 				0C4E6497280BF2AB0061A668 /* Assets.xcassets */,
 				0C4E6499280BF2AB0061A668 /* LaunchScreen.storyboard */,
 				0C4E649C280BF2AB0061A668 /* Info.plist */,
+				7B1F715B280C017700B859A1 /* VisionViewController.swift */,
 			);
 			path = GreenLightReal;
 			sourceTree = "<group>";
@@ -261,10 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B1F715C280C017700B859A1 /* VisionViewController.swift in Sources */,
+				7B1F715E280C01FF00B859A1 /* StringUtils.swift in Sources */,
+				7B1F7162280C03B800B859A1 /* PreviewView.swift in Sources */,
 				0C4E6493280BF2AB0061A668 /* ViewController.swift in Sources */,
 				0C4E64C1280C008A0061A668 /* List.swift in Sources */,
 				0C4E648F280BF2AB0061A668 /* AppDelegate.swift in Sources */,
 				0C4E6491280BF2AB0061A668 /* SceneDelegate.swift in Sources */,
+				7B1F7160280C024900B859A1 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
