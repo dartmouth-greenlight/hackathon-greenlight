@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley", "F004H39" : "Tucker Simpson", "F004hb2": "Jack Desmond"]
+public var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley" ]
+public var redList = ["F004H39" : "Tucker Simpson", "F004hb2": "Jack Desmond"]
 
 
 
@@ -22,12 +23,20 @@ func getList(listName : Dictionary<String, String>) -> [String]{
     return nameList
 }
 
-var names = getList(listName: socialList)
+var names = ["names"]
+
 
 
 class ListViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
+    @IBAction func Green(_ sender: Any) {
+        names = getList(listName: socialList)
+    }
+    
+    @IBAction func Red(_ sender: Any) {
+        names = getList(listName: redList)
+    }
     
 
    
