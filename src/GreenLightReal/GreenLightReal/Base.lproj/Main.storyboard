@@ -83,9 +83,6 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="SocialListButton:" destination="TaD-4e-nwW" eventType="touchUpInside" id="Mmx-Sw-yms"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mnk-99-RRP"/>
@@ -94,7 +91,6 @@
                     <navigationItem key="navigationItem" id="yrY-bv-SRV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsc-fT-wjV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="TaD-4e-nwW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-281.15942028985512" y="-604.01785714285711"/>
         </scene>
