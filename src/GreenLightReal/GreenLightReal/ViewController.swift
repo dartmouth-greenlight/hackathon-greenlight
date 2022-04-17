@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//asdjkhfaksjdf
 
 class ViewController: UIViewController {
 
