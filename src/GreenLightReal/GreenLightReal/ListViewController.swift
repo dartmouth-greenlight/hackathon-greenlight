@@ -11,7 +11,7 @@ var socialList = Set<String>()
 class ListViewController: UIViewController{
     @IBOutlet var listLabel: UILabel!
     @IBAction func socialListButton(_ sender: Any) {
-        listLabel.text = 
+        listLabel.text = ""
     }
     
     override func viewDidLoad() {
