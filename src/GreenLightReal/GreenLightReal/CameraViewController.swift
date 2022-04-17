@@ -148,8 +148,7 @@ class CameraViewController: UIViewController {
         //TODO: Change Properties of numFrame to change numberView
         var numFrame = cutout
         numFrame.origin.y += numFrame.size.height
-        numberView.frame = numFrame
-        numberView.frame = CGRect(x: cutout.minX, y: cutout.origin.y + cutout.size.height, width: cutout.width*0.6, height: cutout.height*0.6);
+        numberView.frame = CGRect (x: cutout.midX-150, y: cutout.origin.y + cutout.size.height, width: 300, height: 100);
     }
     
     func setupOrientationAndTransform() {
