@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-class ViewController: UIViewController {
+class CameraViewController: UIViewController {
     // MARK: - UI objects
     @IBOutlet weak var previewView: PreviewView!
     @IBOutlet weak var cutoutView: UIView!
@@ -265,7 +265,7 @@ class ViewController: UIViewController {
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
 
-extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         // This is implemented in VisionViewController.

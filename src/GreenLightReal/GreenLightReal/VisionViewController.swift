@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-class VisionViewController: ViewController {
+class VisionViewController: CameraViewController {
     var request: VNRecognizeTextRequest!
     // Temporal string tracker
     let numberTracker = StringTracker()
