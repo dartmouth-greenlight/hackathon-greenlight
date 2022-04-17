@@ -13,7 +13,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-   
     
-
+    @IBAction func Green(_ sender: Any) {
+        list = socialList
+    }
+    
+    @IBAction func Red(_ sender: Any) {
+        list = redList
+    }
+    
 }
