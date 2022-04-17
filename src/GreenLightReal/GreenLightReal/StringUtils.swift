@@ -55,32 +55,14 @@ extension String {
     // the range of the number and the number itself as a tuple.
     // Returns nil if no number is found.
     func extractID() -> (Range<String.Index>, String)? {
-        // Do a first pass to find any substring that could be a US phone
-        // number. This will match the following common patterns and more:
-        // xxx-xxx-xxxx
-        // xxx xxx xxxx
-        // (xxx) xxx-xxxx
-        // (xxx)xxx-xxxx
-        // xxx.xxx.xxxx
-        // xxx xxx-xxxx
-        // xxx/xxx.xxxx
-        // +1-xxx-xxx-xxxx
+        // Do a first pass to find any substring that could be a Dartmouth
+        // student ID. This will match the following common patterns and more:
+        // F00#XXX
+        
         // Note that this doesn't only look for digits since some digits look
         // very similar to letters. This is handled later.
         //DID#:F00\d[a-zA-Z0-9_.-][a-zA-Z0-9_.-][a-zA-Z0-9_.-]"#
-//        let pattern = #"DID#:F00\d[a-zA-Z0-9_.-][a-zA-Z0-9_.-][a-zA-Z0-9_.-]"#
         let pattern = #"F00\d[a-zA-Z0-9_.-][a-zA-Z0-9_.-][a-zA-Z0-9_.-]"#
-
-        
-        //        (?x)                    # Verbose regex, allows comments
-        //        (?:\+1-?)?                # Potential international prefix, may have -
-        //        [(]?                    # Potential opening (
-        //        \b(\w{3})                # Capture xxx
-        //        [)]?                    # Potential closing )
-        //        [\ -./]?                # Potential separator
-        //        (\w{3})                    # Capture xxx
-        //        [\ -./]?                # Potential separator
-        //        (\w{4})\b                # Capture xxxx
         
         guard let range = self.range(of: pattern, options: .regularExpression, range: nil, locale: nil) else {
             // No phone number found.
@@ -90,9 +72,9 @@ extension String {
         
 //        Potential number found. Strip out punctuation, whitespace and country
 //        prefix. --> this is where we will strip out DID#:
-        var studentID = String(self[range])
-//        let lower = (range.lowerBound+5 as int),
-//        let upper =
+        
+        //TODO: Figure out how this helps, potentially use to strip out DID#: if including that in regex is better for pattern recognition
+        let studentID = String(self[range])
        // let substring = String(self[range])
 //        let nsrange = NSRange(substring.startIndex..., in: substring)
 //        do {
@@ -109,8 +91,6 @@ extension String {
 //            print("Error \(error) when creating pattern")
 //        }
 
-        // Come Back To This
-        // Must be exactly 7 digits.
         guard studentID.count == 7 else {
             return nil
         }
@@ -130,7 +110,7 @@ extension String {
 }
 
 
-// DON'T TOUCH THIS
+//TODO: Figure out how to make this calculate confidence of guess
 class StringTracker {
     var frameIndex: Int64 = 0
 
@@ -140,7 +120,9 @@ class StringTracker {
     // displaying anything.
     var seenStrings = [String: StringObservation]()
     var bestCount = Int64(0)
+    var secondBestCount = Int64(0)
     var bestString = ""
+    var secondBestString = ""
 
     func logFrame(strings: [String]) {
         for string in strings {
@@ -162,9 +144,13 @@ class StringTracker {
                 obsoleteStrings.append(string)
             }
             
+            
             // Find the string with the greatest count.
+            // Account for second-best count
             let count = obs.count
             if !obsoleteStrings.contains(string) && count > bestCount {
+                secondBestCount = bestCount     //save second best
+                secondBestString = bestString   //save second best
                 bestCount = Int64(count)
                 bestString = string
             }
@@ -179,6 +165,7 @@ class StringTracker {
     
     func getStableString() -> String? {
         // Require the recognizer to see the same string at least 10 times.
+        //TODO: determine score confidence of string recognized
         if bestCount >= 10 {
             return bestString
         } else {
