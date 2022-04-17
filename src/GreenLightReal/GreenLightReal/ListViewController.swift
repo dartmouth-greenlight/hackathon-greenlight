@@ -8,33 +8,41 @@
 import Foundation
 import UIKit
 
-var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley"]
+var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley", "F004H39" : "Tucker Simpson", "F004hb2": "Jack Desmond"]
 
 
-/*func getList(nameList : Dictionary<String,String>) -> [String] {
-    var list = [String]()
-    for id in nameList.keys{
-        list.append(<#String#>"\(String(describing: nameList[id])))
-    
+
+func getList(listName : Dictionary<String, String>) -> [String]{
+    var nameList = [String]()
+    var name = ""
+    for key in listName.keys{
+        name = listName[key] ?? "Mikey"
+        nameList.append(name)
     }
-    return list
-}*/
+    return nameList
+}
+
+var names = getList(listName: socialList)
+
 
 class ListViewController: UIViewController{
+    
     @IBOutlet var tableView: UITableView!
     
-    let names = ["Mikey Maurcio", "Steven Mendley"]
-    //@IBAction func OpenTable(_ sender: Any) {
-        
-    //}
+
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
+       
     }
+    
+    
+    
+    
     
     
     
