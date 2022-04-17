@@ -26,7 +26,7 @@
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGJ-F5-8CW">
+ <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGJ-F5-8CW">
                                 <rect key="frame" x="107.5" y="351.5" width="199" height="139"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HGJ-F5-8CW" secondAttribute="height" multiplier="116:81" id="CA5-0E-yzd"/>
@@ -39,7 +39,7 @@
                                     <segue destination="06p-dY-WSV" kind="presentation" modalPresentationStyle="fullScreen" id="m82-qr-xox"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQM-vd-U9Z">
+   <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQM-vd-U9Z">
                                 <rect key="frame" x="172.5" y="678.5" width="69.5" height="61.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KQM-vd-U9Z" secondAttribute="height" multiplier="69:61" id="VEa-qU-uK6"/>
@@ -50,7 +50,21 @@
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="Green:" destination="hLX-Q9-WUr" eventType="touchUpInside" id="nCW-fT-iB1"/>
                                     <segue destination="Nd5-PA-L15" kind="presentation" modalPresentationStyle="fullScreen" id="To7-p6-DrD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xu-yk-nDX">
+                                <rect key="frame" x="96" y="704" width="222" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Red List">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
+                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Red:" destination="hLX-Q9-WUr" eventType="touchUpInside" id="Yf2-RG-mah"/>
+                                    <segue destination="Ins-um-FJ9" kind="show" id="UlD-Kh-vYf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,6 +85,7 @@
                     <navigationItem key="navigationItem" id="1mS-HZ-Nsr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="hLX-Q9-WUr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1291.304347826087" y="-678.34821428571422"/>
         </scene>
@@ -82,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-dH-J44">
+<button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-dH-J44">
                                 <rect key="frame" x="237" y="113" width="118" height="115"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Black List">
@@ -90,8 +105,11 @@
                                     <fontDescription key="titleFontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="32"/>
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="pxK-CF-dgC"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhk-39-bcb">
+  <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhk-39-bcb">
                                 <rect key="frame" x="60" y="113" width="123.5" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="e7P-YK-wih"/>
@@ -102,9 +120,10 @@
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="OpenTable:" destination="Nd5-PA-L15" eventType="touchUpInside" id="hfd-E4-lCg"/>
+                                    <action selector="socialButton:" destination="Nd5-PA-L15" eventType="touchUpInside" id="Y11-vE-zFO"/>
                                 </connections>
                             </button>
+
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWk-vD-OCZ">
                                 <rect key="frame" x="20" y="45" width="102.5" height="55"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -116,7 +135,7 @@
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="pxK-CF-dgC"/>
+       <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="pxK-CF-dgC"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZNs-dk-8IK">
@@ -129,6 +148,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fhE-GR-s7z" id="9WT-WZ-7Qb">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                <color key="sectionIndexColor" systemColor="systemGreenColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="p6K-FE-p7L">
+                                        <rect key="frame" x="0.0" y="44.5" width="295" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p6K-FE-p7L" id="EeQ-Il-Ox1">
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43.5"/>
+
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -149,7 +176,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="mnk-99-RRP"/>
+                        <viewLayoutGuide key="safeArea" id="ylQ-Pt-aGj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jhk-39-bcb" firstAttribute="bottom" secondItem="KNM-dH-J44" secondAttribute="bottom" id="17z-ss-zN5"/>
@@ -170,15 +197,11 @@
                             <constraint firstItem="mnk-99-RRP" firstAttribute="bottom" secondItem="ZNs-dk-8IK" secondAttribute="bottom" constant="48" id="xkz-Cu-cLx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yrY-bv-SRV"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="tableView" destination="ZNs-dk-8IK" id="khN-ZO-ljm"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="8zG-8i-MgB"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qsc-fT-wjV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEy-9A-he4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281.15942028985512" y="-678.34821428571422"/>
+            <point key="canvasLocation" x="-281" y="173"/>
         </scene>
         <!--Vision View Controller-->
         <scene sceneID="U1w-Sr-Cbg">
@@ -209,6 +232,21 @@
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="BBY-a2-ybg"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxn-Xu-o64">
+                                        <rect key="frame" x="105" y="728" width="204" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Enter NetID Manually">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Futura-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,11 +305,11 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-281" y="181"/>
+            <point key="canvasLocation" x="-1291" y="174"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BBY-a2-ybg"/>
+        <segue reference="5hJ-Fg-pTa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

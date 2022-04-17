@@ -2,7 +2,7 @@
 //  CameraViewController.swift
 //  GreenLightReal
 //
-//  Created by Jack Desmond on 4/17/22.
+//  Created by Jack Desmond, Tucker Simpson, Mikey Mauricio, and Steven Mendley on 4/17/22.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ class CameraViewController: UIViewController {
     // MARK: - UI objects
     @IBOutlet weak var previewView: PreviewView!
     @IBOutlet weak var cutoutView: UIView!
-    @IBOutlet weak var numberView: UILabel!     //pretty sure this is the box that comes w ID
+    @IBOutlet weak var idView: UILabel!     //pretty sure this is the box that comes w ID
     var maskLayer = CAShapeLayer()
     // Device orientation. Updated whenever the orientation changes to a
     // different supported orientation.
@@ -144,12 +144,11 @@ class CameraViewController: UIViewController {
         path.append(UIBezierPath(roundedRect: cutout, cornerRadius:10))
         maskLayer.path = path.cgPath
         
-        // Move the number view down to under cutout.
-        //TODO: Change Properties of numFrame to change numberView
-        var numFrame = cutout
-        numFrame.origin.y += numFrame.size.height
-        numberView.frame = numFrame
-//        numberView.frame = CGRect(width: cutout.width, height: cutout.height*0.6, x: cutout.minX, y: cutout.origin.y += cutout.size.height);
+        // Move the ID view down to under cutout.
+        //TODO: Change Properties of idFrame to change idView
+        var idFrame = cutout
+        idFrame.origin.y += idFrame.size.height
+        idView.frame = CGRect (x: cutout.midX-150, y: cutout.origin.y + cutout.size.height, width: 300, height: 100);
     }
     
     func setupOrientationAndTransform() {
@@ -242,14 +241,29 @@ class CameraViewController: UIViewController {
     // MARK: - UI drawing and interaction
     
     func showString(string: String) {
-        // Found a definite number.
+        // Found a definite ID.
         // Stop the camera synchronously to ensure that no further buffers are
-        // received. Then update the number view asynchronously.
+        // received. Then update the ID view asynchronously.
         captureSessionQueue.sync {
             self.captureSession.stopRunning()
             DispatchQueue.main.async {
-                self.numberView.text = string
-                self.numberView.isHidden = false
+                //Red case:
+                self.cutoutView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+                self.idView.backgroundColor = UIColor.red.withAlphaComponent((0.5))
+                
+                //Yellow case:
+//                self.cutoutView.backgroundColor = UIColor.yellow.withAlphaComponent(0.5)
+//                self.idView.backgroundColor = UIColor.yellow.withAlphaComponent((0.5))
+                
+                //Green case:
+//                self.cutoutView.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+//                self.idView.backgroundColor = UIColor.green.withAlphaComponent((0.5))
+//
+                
+                self.idView.text = string
+                self.idView.isHidden = false
+                self.idView.text = string
+                self.idView.isHidden = false
             }
         }
     }
@@ -260,7 +274,7 @@ class CameraViewController: UIViewController {
                 self.captureSession.startRunning()
             }
             DispatchQueue.main.async {
-                self.numberView.isHidden = true
+                self.idView.isHidden = true
             }
         }
     }
