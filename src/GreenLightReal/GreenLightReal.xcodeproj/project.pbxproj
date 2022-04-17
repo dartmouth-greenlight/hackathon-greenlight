@@ -117,8 +117,8 @@
 				0C4E6494280BF2AB0061A668 /* Main.storyboard */,
 				0C4E6497280BF2AB0061A668 /* Assets.xcassets */,
 				0C4E6499280BF2AB0061A668 /* LaunchScreen.storyboard */,
-				0C4E649C280BF2AB0061A668 /* Info.plist */,
 				7B1F715B280C017700B859A1 /* VisionViewController.swift */,
+				0C4E649C280BF2AB0061A668 /* Info.plist */,
 			);
 			path = GreenLightReal;
 			sourceTree = "<group>";
