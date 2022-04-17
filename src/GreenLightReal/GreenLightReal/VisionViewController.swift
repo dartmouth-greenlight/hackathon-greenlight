@@ -37,6 +37,9 @@ class VisionViewController: CameraViewController {
         
         let maximumCandidates = 1
         
+        
+        //TODO: figure out how to read more stuff from the ID
+        //TODO: figure out how to reference social / blacklist here when an ID is recognized
         for visionResult in results {
             guard let candidate = visionResult.topCandidates(maximumCandidates).first else { continue }
             
@@ -47,7 +50,7 @@ class VisionViewController: CameraViewController {
             // the full result only draw the green box.
             var numberIsSubstring = true
             
-            if let result = candidate.string.extractPhoneNumber() {
+            if let result = candidate.string.extractID() {
                 let (range, number) = result
                 // Number may not cover full visionResult. Extract bounding box
                 // of substring.
