@@ -248,6 +248,21 @@ class CameraViewController: UIViewController {
         captureSessionQueue.sync {
             self.captureSession.stopRunning()
             DispatchQueue.main.async {
+                //Red case:
+                self.cutoutView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+                self.numberView.backgroundColor = UIColor.red.withAlphaComponent((0.5))
+                
+                //Yellow case:
+//                self.cutoutView.backgroundColor = UIColor.yellow.withAlphaComponent(0.5)
+//                self.numberView.backgroundColor = UIColor.yellow.withAlphaComponent((0.5))
+                
+                //Green case:
+//                self.cutoutView.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+//                self.numberView.backgroundColor = UIColor.green.withAlphaComponent((0.5))
+//
+                
+                self.numberView.text = string
+                self.numberView.isHidden = false
                 self.numberView.text = string
                 self.numberView.isHidden = false
             }
