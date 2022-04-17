@@ -149,7 +149,7 @@ class CameraViewController: UIViewController {
         var numFrame = cutout
         numFrame.origin.y += numFrame.size.height
         numberView.frame = numFrame
-//        numberView.frame = CGRect(width: cutout.width, height: cutout.height*0.6, x: cutout.minX, y: cutout.origin.y += cutout.size.height);
+        numberView.frame = CGRect(x: cutout.minX, y: cutout.origin.y + cutout.size.height, width: cutout.width*0.6, height: cutout.height*0.6);
     }
     
     func setupOrientationAndTransform() {
