@@ -247,21 +247,23 @@ class CameraViewController: UIViewController {
         captureSessionQueue.sync {
             self.captureSession.stopRunning()
             DispatchQueue.main.async {
-                //Red case:
-                self.cutoutView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
-                self.idView.backgroundColor = UIColor.red.withAlphaComponent((0.5))
+                // Green case:
+                if(socialList.keys.contains(string)){
+                    self.cutoutView.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+                    self.idView.backgroundColor = UIColor.green.withAlphaComponent((0.5))
+                }
+                // Red case:
+                else if(redList.keys.contains(string)){
+                    self.cutoutView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+                    self.idView.backgroundColor = UIColor.red.withAlphaComponent((0.5))
+                }
+                // Yellow case:
+                else{
+                    self.cutoutView.backgroundColor = UIColor.yellow.withAlphaComponent(0.5)
+                    self.idView.backgroundColor = UIColor.yellow.withAlphaComponent((0.5))
+                }
                 
-                //Yellow case:
-//                self.cutoutView.backgroundColor = UIColor.yellow.withAlphaComponent(0.5)
-//                self.idView.backgroundColor = UIColor.yellow.withAlphaComponent((0.5))
                 
-                //Green case:
-//                self.cutoutView.backgroundColor = UIColor.green.withAlphaComponent(0.5)
-//                self.idView.backgroundColor = UIColor.green.withAlphaComponent((0.5))
-//
-                
-                self.idView.text = string
-                self.idView.isHidden = false
                 self.idView.text = string
                 self.idView.isHidden = false
             }
@@ -275,6 +277,7 @@ class CameraViewController: UIViewController {
             }
             DispatchQueue.main.async {
                 self.idView.isHidden = true
+                self.cutoutView.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
             }
         }
     }
