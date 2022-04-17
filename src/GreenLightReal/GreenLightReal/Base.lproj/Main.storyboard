@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +33,7 @@
                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="06p-dY-WSV" kind="show" id="m82-qr-xox"/>
+                                    <segue destination="06p-dY-WSV" kind="presentation" modalPresentationStyle="fullScreen" id="m82-qr-xox"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQM-vd-U9Z">
@@ -143,42 +144,68 @@
         <scene sceneID="U1w-Sr-Cbg">
             <objects>
                 <viewController id="06p-dY-WSV" customClass="VisionViewController" customModule="GreenLightReal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qfd-pX-Bd5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                    <view key="view" contentMode="scaleToFill" id="IZe-on-m0T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CzI-vV-CTo">
-                                <rect key="frame" x="20" y="20" width="97" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" systemColor="systemGreenColor"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="plain" title="Back">
-                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="32"/>
-                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="G9r-tN-hTy"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tG-Jf-tvm" customClass="PreviewView" customModule="RealtimeNumberReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YY-N8-ADg" userLabel="Cutout View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCH-iU-LbG">
+                                <rect key="frame" x="116.5" y="430.5" width="181" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0001112222">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="30" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="4D8-rp-UcR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="HBy-Ga-76V"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XCH-iU-LbG" firstAttribute="centerY" secondItem="IZe-on-m0T" secondAttribute="centerY" placeholder="YES" id="14b-E0-TBb"/>
+                            <constraint firstAttribute="trailing" secondItem="4YY-N8-ADg" secondAttribute="trailing" id="Dx8-GP-Gu1"/>
+                            <constraint firstAttribute="trailing" secondItem="3tG-Jf-tvm" secondAttribute="trailing" id="EeK-BV-T8W"/>
+                            <constraint firstItem="3tG-Jf-tvm" firstAttribute="centerX" secondItem="IZe-on-m0T" secondAttribute="centerX" id="Pgr-sT-bxd"/>
+                            <constraint firstItem="4YY-N8-ADg" firstAttribute="centerX" secondItem="IZe-on-m0T" secondAttribute="centerX" id="Poz-Zz-MHo"/>
+                            <constraint firstAttribute="bottom" secondItem="4YY-N8-ADg" secondAttribute="bottom" id="Re7-lQ-c5j"/>
+                            <constraint firstAttribute="bottom" secondItem="3tG-Jf-tvm" secondAttribute="bottom" id="U2v-pb-TAX"/>
+                            <constraint firstItem="XCH-iU-LbG" firstAttribute="centerX" secondItem="IZe-on-m0T" secondAttribute="centerX" placeholder="YES" id="V8s-GN-tE0"/>
+                            <constraint firstItem="4YY-N8-ADg" firstAttribute="centerY" secondItem="IZe-on-m0T" secondAttribute="centerY" id="bgh-d6-HW1"/>
+                            <constraint firstItem="3tG-Jf-tvm" firstAttribute="centerY" secondItem="IZe-on-m0T" secondAttribute="centerY" id="zFQ-ZP-0bh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="veK-dP-TLd"/>
+                    <connections>
+                        <outlet property="cutoutView" destination="4YY-N8-ADg" id="XZG-2j-5oc"/>
+                        <outlet property="numberView" destination="XCH-iU-LbG" id="1Jq-mG-sYB"/>
+                        <outlet property="previewView" destination="3tG-Jf-tvm" id="0B8-RE-xBx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuN-lA-zMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-281" y="181"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pxK-CF-dgC"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

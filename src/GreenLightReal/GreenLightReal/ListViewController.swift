@@ -7,23 +7,11 @@
 
 import Foundation
 import UIKit
-let socialList: Set = ["f004gd3", "f004gd5", "f004ge6"]
-func getList(nameList : Set<String>) -> String {
-    var list = ""
-    for name in nameList{
-        list.append("\(name) \n")
-    
-    }
-    return list
-}
-
-
+var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley"]
 class ListViewController: UIViewController{
     @IBOutlet var listLabel: UILabel!
-   
-    
     @IBAction func socialListButton(_ sender: Any) {
-        listLabel.text = getList(nameList: socialList)
+        listLabel.text = "Social List";
     }
     
     override func viewDidLoad() {

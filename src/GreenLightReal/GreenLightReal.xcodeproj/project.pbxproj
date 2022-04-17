@@ -19,6 +19,7 @@
 		0C4E64C1280C008A0061A668 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		0C4E64C9280C1D710061A668 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64C8280C1D710061A668 /* ListViewController.swift */; };
 		488135B1280C16FC003A044D /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715D280C01FF00B859A1 /* StringUtils.swift */; };
+		512CE57A280C1F9E005DF266 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512CE579280C1F9E005DF266 /* Student.swift */; };
 		7B1F715C280C017700B859A1 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715B280C017700B859A1 /* VisionViewController.swift */; };
 		7B1F7160280C024900B859A1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715F280C024900B859A1 /* CameraViewController.swift */; };
 		7B1F7162280C03B800B859A1 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F7161280C03B800B859A1 /* PreviewView.swift */; };
@@ -56,6 +57,7 @@
 		0C4E64AF280BF2AC0061A668 /* GreenLightRealUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenLightRealUITests.swift; sourceTree = "<group>"; };
 		0C4E64B1280BF2AC0061A668 /* GreenLightRealUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenLightRealUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0C4E64C8280C1D710061A668 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		512CE579280C1F9E005DF266 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		7B1F715B280C017700B859A1 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
 		7B1F715D280C01FF00B859A1 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		7B1F715F280C024900B859A1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				0C4E648E280BF2AB0061A668 /* AppDelegate.swift */,
+				512CE579280C1F9E005DF266 /* Student.swift */,
 				0C4E6490280BF2AB0061A668 /* SceneDelegate.swift */,
 				0C4E6492280BF2AB0061A668 /* ViewController.swift */,
 				7B1F715D280C01FF00B859A1 /* StringUtils.swift */,
@@ -277,6 +280,7 @@
 				7B1F715C280C017700B859A1 /* VisionViewController.swift in Sources */,
 				7B1F7162280C03B800B859A1 /* PreviewView.swift in Sources */,
 				0C4E6493280BF2AB0061A668 /* ViewController.swift in Sources */,
+				512CE57A280C1F9E005DF266 /* Student.swift in Sources */,
 				0C4E64C1280C008A0061A668 /* (null) in Sources */,
 				488135B1280C16FC003A044D /* StringUtils.swift in Sources */,
 				0C4E64C9280C1D710061A668 /* ListViewController.swift in Sources */,
@@ -459,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5SLTZMK434;
+				DEVELOPMENT_TEAM = L5635LT8AQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLightReal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -467,12 +471,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DartmouthGreenLight;
+				PRODUCT_BUNDLE_IDENTIFIER = DartGreenLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -487,7 +492,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5SLTZMK434;
+				DEVELOPMENT_TEAM = L5635LT8AQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GreenLightReal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -495,12 +500,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = DartmouthGreenLight;
+				PRODUCT_BUNDLE_IDENTIFIER = DartGreenLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
