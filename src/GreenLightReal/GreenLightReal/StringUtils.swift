@@ -54,7 +54,7 @@ extension String {
     // Extracts the first US-style phone number found in the string, returning
     // the range of the number and the number itself as a tuple.
     // Returns nil if no number is found.
-    func extractPhoneNumber() -> (Range<String.Index>, String)? {
+    func extractID() -> (Range<String.Index>, String)? {
         // Do a first pass to find any substring that could be a US phone
         // number. This will match the following common patterns and more:
         // xxx-xxx-xxxx
