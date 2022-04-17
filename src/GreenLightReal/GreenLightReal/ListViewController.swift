@@ -30,20 +30,14 @@ var names = ["names"]
 class ListViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
-    @IBAction func Green(_ sender: Any) {
-        names = getList(listName: socialList)
-    }
-    
-    @IBAction func Red(_ sender: Any) {
-        names = getList(listName: redList)
-    }
+   
     
 
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        names = getList(listName: socialList)
         tableView.delegate = self
         tableView.dataSource = self
        
