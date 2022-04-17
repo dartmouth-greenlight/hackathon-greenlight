@@ -155,6 +155,10 @@ class StringTracker {
                 bestString = string
             }
         }
+        
+        print("Seen best string: \(bestString) \(bestCount) times")
+        print("Seen second best string: \(secondBestString)\(secondBestCount) times")
+
         // Remove old strings.
         for string in obsoleteStrings {
             seenStrings.removeValue(forKey: string)
