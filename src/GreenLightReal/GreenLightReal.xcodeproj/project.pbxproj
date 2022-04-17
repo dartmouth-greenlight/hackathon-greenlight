@@ -16,6 +16,7 @@
 		0C4E64A6280BF2AC0061A668 /* GreenLightRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64A5280BF2AC0061A668 /* GreenLightRealTests.swift */; };
 		0C4E64B0280BF2AC0061A668 /* GreenLightRealUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64AF280BF2AC0061A668 /* GreenLightRealUITests.swift */; };
 		0C4E64B2280BF2AC0061A668 /* GreenLightRealUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64B1280BF2AC0061A668 /* GreenLightRealUITestsLaunchTests.swift */; };
+		0C4E64C1280C008A0061A668 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E64C0280C008A0061A668 /* List.swift */; };
 		7B1F715C280C017700B859A1 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715B280C017700B859A1 /* VisionViewController.swift */; };
 		7B1F715E280C01FF00B859A1 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715D280C01FF00B859A1 /* StringUtils.swift */; };
 		7B1F7160280C024900B859A1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F715F280C024900B859A1 /* CameraViewController.swift */; };
@@ -274,6 +275,7 @@
 				7B1F715E280C01FF00B859A1 /* StringUtils.swift in Sources */,
 				7B1F7162280C03B800B859A1 /* PreviewView.swift in Sources */,
 				0C4E6493280BF2AB0061A668 /* ViewController.swift in Sources */,
+				0C4E64C1280C008A0061A668 /* List.swift in Sources */,
 				0C4E648F280BF2AB0061A668 /* AppDelegate.swift in Sources */,
 				0C4E6491280BF2AB0061A668 /* SceneDelegate.swift in Sources */,
 				7B1F7160280C024900B859A1 /* CameraViewController.swift in Sources */,
