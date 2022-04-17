@@ -13,7 +13,7 @@ class CameraViewController: UIViewController {
     // MARK: - UI objects
     @IBOutlet weak var previewView: PreviewView!
     @IBOutlet weak var cutoutView: UIView!
-    @IBOutlet weak var numberView: UILabel!
+    @IBOutlet weak var numberView: UILabel!     //pretty sure this is the box that comes w ID
     var maskLayer = CAShapeLayer()
     // Device orientation. Updated whenever the orientation changes to a
     // different supported orientation.
@@ -107,8 +107,8 @@ class CameraViewController: UIViewController {
         // buffer width to height. When the UI is rotated to portrait, keep the
         // vertical size the same (in buffer pixels). Also try to keep the
         // horizontal size the same up to a maximum ratio.
-        let desiredHeightRatio = 0.15
-        let desiredWidthRatio = 0.6
+        let desiredHeightRatio = 0.5398
+        let desiredWidthRatio = 0.856
         let maxPortraitWidth = 0.8
         
         // Figure out size of ROI.
@@ -121,7 +121,7 @@ class CameraViewController: UIViewController {
         // Make it centered.
         regionOfInterest.origin = CGPoint(x: (1 - size.width) / 2, y: (1 - size.height) / 2)
         regionOfInterest.size = size
-        
+                
         // ROI changed, update transform.
         setupOrientationAndTransform()
         
@@ -136,17 +136,20 @@ class CameraViewController: UIViewController {
     func updateCutout() {
         // Figure out where the cutout ends up in layer coordinates.
         let roiRectTransform = bottomToTopTransform.concatenating(uiRotationTransform)
+        
         let cutout = previewView.videoPreviewLayer.layerRectConverted(fromMetadataOutputRect: regionOfInterest.applying(roiRectTransform))
         
         // Create the mask.
-        let path = UIBezierPath(rect: cutoutView.frame)
-        path.append(UIBezierPath(rect: cutout))
+        let path = UIBezierPath(roundedRect: cutoutView.frame, cornerRadius:10)
+        path.append(UIBezierPath(roundedRect: cutout, cornerRadius:10))
         maskLayer.path = path.cgPath
         
         // Move the number view down to under cutout.
+        //TODO: Change Properties of numFrame to change numberView
         var numFrame = cutout
         numFrame.origin.y += numFrame.size.height
         numberView.frame = numFrame
+//        numberView.frame = CGRect(width: cutout.width, height: cutout.height*0.6, x: cutout.minX, y: cutout.origin.y += cutout.size.height);
     }
     
     func setupOrientationAndTransform() {
