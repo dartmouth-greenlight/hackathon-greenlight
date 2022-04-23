@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 public var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley" ]
-public var redList = ["F004H39" : "Tucker Simpson", "F004hb2": "Jack Desmond"]
-
-
+public var redList = ["F004H39" : "Tucker Simpson", "F004HB2": "Jack Desmond"]
 
 func getList(listName : Dictionary<String, String>) -> [String]{
     var nameList = [String]()
@@ -23,21 +21,20 @@ func getList(listName : Dictionary<String, String>) -> [String]{
     return nameList
 }
 
-var names = ["names"]
+var names = getList(listName: socialList)
 
 
 
 class ListViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
+
+    
    
     
-
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        names = getList(listName: socialList)
         tableView.delegate = self
         tableView.dataSource = self
        
