@@ -11,8 +11,6 @@ import UIKit
 public var socialList = ["F004GD3":"Michael Mauricio", "F003XS5":"Steven Mendley" ]
 public var redList = ["F004H39" : "Tucker Simpson", "F004HB2": "Jack Desmond"]
 
-
-public var list = socialList
 func getList(listName : Dictionary<String, String>) -> [String]{
     var nameList = [String]()
     var name = ""
@@ -23,13 +21,14 @@ func getList(listName : Dictionary<String, String>) -> [String]{
     return nameList
 }
 
-var names = getList(listName: list)
+var names = getList(listName: socialList)
 
 
 
 class ListViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
+
     
    
     

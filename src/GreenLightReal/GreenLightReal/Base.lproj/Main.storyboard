@@ -164,6 +164,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="5hJ-Fg-pTa"/>
                                 </connections>
                             </button>
+                            
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wYX-YK-Nnl">
                                 <rect key="frame" x="60" y="160" width="295" height="648"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -191,7 +192,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nub-cN-iL9">
-                                <rect key="frame" x="132" y="77" width="150" height="115"/>
+                                <rect key="frame" x="132" y="106" width="150" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Red List">
@@ -202,6 +203,14 @@
                                     <action selector="socialButton:" destination="Nd5-PA-L15" eventType="touchUpInside" id="Ddc-2N-rZn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="****" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCo-NG-bFa">
+                                <rect key="frame" x="122" y="193" width="170" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                      
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ylQ-Pt-aGj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
